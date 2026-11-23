@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de Controle de Notas Fiscais - Grupo Emalto">
+    <title>Controle de Notas Fiscais</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <div class="logo-icon">📋</div>
+                <div class="logo-text">
+                    <h1>ControleNF</h1>
+                    <span>Grupo Emalto</span>
+                </div>
+            </div>
+            <button id="sidebar-toggle" class="sidebar-toggle" title="Recolher Menu">
+                <span class="toggle-icon">☰</span>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">Principal</div>
+                <div class="nav-item active" data-page="dashboard" id="nav-dashboard">
+                    <span class="nav-icon">📊</span> <span>Dashboard</span>
+                </div>
+                <div class="nav-item" data-page="notas" id="nav-notas">
+                    <span class="nav-icon">📄</span> <span>Notas Fiscais</span>
+                </div>
+                <div class="nav-item" data-page="contratos" id="nav-contratos">
+                    <span class="nav-icon">📅</span> <span>Contratos Mensais</span>
+                    <span class="nav-badge" id="contratos-pendentes-badge" style="display:none">0</span>
+                </div>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Cadastros</div>
+                <div class="nav-item" data-page="cadastros" id="nav-cadastros">
+                    <span class="nav-icon">⚙️</span> <span>Cadastros Base</span>
+                </div>
+                <div class="nav-item" data-page="diretorio" id="nav-diretorio">
+                    <span class="nav-icon">🔍</span> <span>Consulta Códigos</span>
+                </div>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Relatórios</div>
+                <div class="nav-item" data-page="relatorios" id="nav-relatorios">
+                    <span class="nav-icon">📈</span> <span>Relatórios</span>
+                </div>
+            </div>
+        </nav>
+        <div class="sidebar-footer">ControleNF v1.0 &copy; 2026</div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <h2 id="page-title">Dashboard</h2>
+            </div>
+            <div class="top-bar-right">
+                <div class="month-selector">
+                    <span>📅</span>
+                    <select id="select-mes"></select>
+                    <select id="select-ano"></select>
+                </div>
+                <button class="btn-notif" id="btn-notificacoes" title="Notificações">
+                    🔔
+                    <span class="notif-dot" id="notif-dot" style="display:none"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Pages -->
+        <div class="page-content">
+            <!-- Dashboard -->
+            <section class="page-section active" id="page-dashboard"></section>
+            <!-- Notas Fiscais -->
+            <section class="page-section" id="page-notas"></section>
+            <!-- Contratos -->
+            <section class="page-section" id="page-contratos"></section>
+            <!-- Cadastros Base -->
+            <section class="page-section" id="page-cadastros"></section>
+            <!-- Diretório de Códigos -->
+            <section class="page-section" id="page-diretorio"></section>
+            <!-- Relatórios -->
+            <section class="page-section" id="page-relatorios"></section>
+        </div>
+    </main>
+</div>
+
+<!-- Notification Panel -->
+<div class="notif-panel-backdrop" id="notif-backdrop"></div>
+<div class="notif-panel" id="notif-panel">
+    <div class="notif-panel-header">
+        <h3>🔔 Notificações</h3>
+        <button class="modal-close" id="notif-close">&times;</button>
+    </div>
+    <div class="notif-panel-body" id="notif-body"></div>
+</div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <h3 id="modal-title">Modal</h3>
+            <button class="modal-close" id="modal-close">&times;</button>
+        </div>
+        <div class="modal-body" id="modal-body"></div>
+        <div class="modal-footer" id="modal-footer"></div>
+    </div>
+</div>
+
+<!-- Toast Container -->
+<div class="toast-container" id="toast-container"></div>
+
+<script src="/js/api.js"></script>
+<script src="/js/dashboard.js"></script>
+<script src="/js/notas.js"></script>
+<script src="/js/contratos.js"></script>
+<script src="/js/cadastros.js"></script>
+<script src="/js/diretorio.js"></script>
+<script src="/js/relatorios.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

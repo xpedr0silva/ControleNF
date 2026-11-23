@@ -1,0 +1,55 @@
+# ==============================================================================
+# GITIGNORE - SISTEMA CONTROLENF
+# Proteção de Dados Sigilosos, Bancos de Dados e Arquivos Temporários
+# ==============================================================================
+
+# --- Ambientes Virtuais e Dependências ---
+venv/
+.venv/
+env/
+ENV/
+backend/venv/
+node_modules/
+
+# --- Bytecode e Caches Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# --- BANCOS DE DADOS REAIS DE PRODUÇÃO (SIGILO EMPRESARIAL) ---
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+backend/data/*.db
+backend/data/*.db-wal
+backend/data/*.db-shm
+backend/data/backups/
+backend/data/exports/
+
+# --- PLANILHAS FINANCEIRAS E DADOS REAIS ---
+*.xlsx
+*.xls
+*.csv
+Controle Notas Fiscais.xlsx
+
+# --- Logs, Relatórios Temporários e Diagnósticos ---
+*.log
+totvs_log.txt
+uv_mcp_test.log
+scratch_dir*.txt
+Thumbs.db
+.DS_Store
+~$*.docx
+~$*.xlsx
+
+# --- IDEs, Agentes e Metadados Locais ---
+.vscode/
+.idea/
+.agent/
+.graphify_python
+.graphify_python/
+graphify-out/
