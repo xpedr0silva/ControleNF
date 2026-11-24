@@ -34,7 +34,7 @@ O **ControleNF** migrou a governança para uma aplicação web centralizada, int
 
 ## 📊 Métricas do Sistema em Produção (2026)
 
-- **9 Empresas do Grupo Atendidas:** EIM, EEM, EEN, Fundação Emalto, Torque Diesel, Torque Diesel Filial, Torque Grill, Torque Pneus e Agronegócios.
+- **8 Empresas do Grupo Atendidas:** EIM, EEM, EEN, Fundação Emalto, Torque Diesel, Torque Diesel Filial, Torque Grill, Torque Pneus e Agronegócios.
 - **28 Fornecedores Monitorados:** TOTVS, KTREE, Junsoft, SysAid, Vero, Vivo, Google Cloud, Interponto, Netsol, Mak Solutions, Starlink, WebPosto, entre outros.
 - **64 Contratos de Software Ativos.**
 - **744 Lançamentos Mensais Gerenciados na Matriz Anual.**
