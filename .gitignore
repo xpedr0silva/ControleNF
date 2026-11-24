@@ -53,3 +53,18 @@ Thumbs.db
 .graphify_python
 .graphify_python/
 graphify-out/
+
+# --- Documentos Acadêmicos e Manuais da Multivix ---
+*.pdf
+*.docx
+RELATORIO_ATIVIDADE_PRATICA_ADS.md
+Imagens Relatório/
+
+# --- Anotações de Contexto e Mapeamentos Internos ---
+CONTEXT.md
+000_Knowledge_Map.md
+
+# --- Scripts Internos de Manutenção/Depuração ---
+scripts/
+check_codigos.py
+sync_codigos.py
